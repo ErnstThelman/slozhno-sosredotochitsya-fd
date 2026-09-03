@@ -1,5 +1,346 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bgImage);
+  background-position: center;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+  color:var(--text-color);
+}
+
+.header {
+  position: relative;
+  display: grid;
+  min-height: 648px;
+  padding: 20px;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header__title {
+  position: relative;
+  display: grid;
+  font-size: clamp(7.25rem, 15.3vw, 9.81rem);
+  font-weight: 700;
+  color:var(--title-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  line-height: 0.8;
+  align-items: end;
+  margin-left: -20px;
+  margin-top: 273px;
+}
+
+.header__title-text {
+  display: grid;
+  background-color:var(--accent-color);
+  color: var(--sub-content-title-color);
+  font-weight: 700;
+  text-align: left;
+  max-width: 100%;
+  margin: 117px 0px 116px 493px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: center;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 1.5px 13px;
+  color: var(--btn-text-color);
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--btn-hover-text);
+}
+
+.btn:focus {
+  border-bottom: 1px solid var(--btn-hover-text);
+}
+
+.header__theme-menu-button.header__theme-menu-button_active {
+  border-color:var(--btn-text-color);
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0px var(--accent-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--btn-link);
+}
+
+.link:focus {
+  text-decoration: none;
+  border: 1px solid transparent;
+  color: var(--btn-link);
+}
+
+.rec__indicator {
+  position: absolute;
+  right: 9px;
+  display: flex;
+  align-items: center; 
+  gap: 10px;
+  color: var(--accent-color); 
+  opacity: var(--is-theme);
+}
+
+.rec__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 15px currentColor;
+}
+
+.corner__top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.corner__bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+.content {
+  display: grid;
+  padding: 60px 20px 60px 20px;
+  gap: 80px;
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+.content__title {
+  display: grid;
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  color:var(--content-title-color);
+  gap: 20px;
+  grid-template-columns: minmax(0, 315px);
+}
+
+.content__subtitle {
+  background-color: var(--accent-color);
+  font-size: 18px;
+  color: var(--sub-content-title-color);
+}
+
+.content__text-block {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+}
+
+.content__paragraph {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.container__section {
+  display: grid;
+  gap: 20px;
+  grid-auto-flow: column;
+}
+
+.content__text-block-column {
+  display: grid;
+  gap: 20px;
+}
+
+.container__section-column {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.content__collage-block {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 260px 314px 433px;
+  gap: 20px;
+}
+
+.content__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.content__item-sea {
+  grid-column: 1/3;
+}
+
+.content__item-cat {
+  grid-row: 1/3;
+  grid-column: -2/-1;
+}
+
+.content__item-books {
+  grid-row-start: -3;
+  grid-column-start: 2;
+}
+
+.content__item-tape {
+  grid-row: 2/4;
+}
+
+.content__item-street {
+  grid-column: 2/4;
+}
+
+.footer__logo {
+  position: relative;
+  display: grid;
+  font-size: clamp(7.25rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0px var(--accent-colorfons);
+  justify-content: center;
+  align-content: space-around;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  height: 100vh;
+  min-height: 768px;
+}
+
+.footer__corner-top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.footer__corner-bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+@media (max-width: 1024px) {
+  .header__theme-menu-list {
+    grid-auto-flow: row;
+    justify-self: end;
+    padding: 173px 0px;  
+  }
+  .page {
+    inline-size: 100%;
+  }
+
+  .header__title {
+    margin: 0px;
+  }
+
+  .content__collage-block {
+    grid-template-rows: 192px 230px 318px;
+  }
+
+  .header__title-text {
+    margin: 183px 0px 162px 384px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header{
+    padding:0px;
+    grid-template-rows: auto 1fr auto;
+  }
+  .page {
+    padding: 10px;
+  }
+
+  .header__theme-menu-list {
+    padding: 65px 0px;  
+  }
+
+  .header__title-text {
+    margin: 55px 0px;
+  }
+
+  .content {
+    padding: 40px 0px;
+    gap: 50px;
+  }
+
+  .content__text-block {
+    grid-auto-flow: row;
+    gap: 15px;
+  }
+
+  .container__section-column {
+    grid-template-columns: 1fr;
+  }
+
+  .content__collage-block {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .content__item-sea,
+  .content__item-cat,
+  .content__item-books,
+  .content__item-tape,
+  .content__item-street {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .corner-top-right {
+    top: 0px;
+    right: 0px;
+  }
+
+  .corner-bottom-left {
+    bottom: 0px;
+    left: 0px;
+  }
+
+  .footer {
+    padding: 0px;
+    min-height: 668px;
+  }
+
+  .footer__corner-top-right {
+    top: 0px;
+    right: 0px;
+  }
+
+  .footer__corner-bottom-left {
+    bottom: 0px;
+    left: 0px;
+  }
 }
