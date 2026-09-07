@@ -127,7 +127,6 @@
   display: grid;
   padding: 60px 20px 60px 20px;
   gap: 80px;
-  line-height: 1.4;
   font-size: 18px;
 }
 
@@ -173,6 +172,11 @@
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.content__collage {
+  display: grid;
+  gap: 20px;
 }
 
 .content__collage-block {
@@ -265,6 +269,7 @@
 
   .header__title {
     margin: 0;
+    line-height: 0.9;
   }
 
   .page {
