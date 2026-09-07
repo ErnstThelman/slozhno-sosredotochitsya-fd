@@ -292,7 +292,6 @@
 
   .content__text-block {
     grid-auto-flow: row;
-    gap: 15px;
   }
 
   .content__title {
@@ -303,9 +302,14 @@
     grid-template-columns: 1fr;
   }
 
+  .content__collage {
+    gap: 10px;
+  }
+
   .content__collage-block {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    gap: 10px;
   }
 
   .content__item-sea,
@@ -327,6 +331,26 @@
   .footer__corner-bottom-left {
     bottom: 0px;
     left: 0px;
+  }
+
+  .content__item-sea {
+    order: 1;
+  }
+
+  .content__item-cat {
+    order: 2;
+  }
+ 
+  .content__item-books {
+    order: 4;
+  }
+ 
+  .content__item-tape {
+    order: 3;
+  }
+
+  .content__item-street {
+    order: 5;
   }
 
   .footer {

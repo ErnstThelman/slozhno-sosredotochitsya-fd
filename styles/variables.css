@@ -17,3 +17,9 @@
   --btn-link: #F1B2CE;
   --is-theme: 1;
 }
+
+#p1 { grid-area: sea; }
+#p2 { grid-area: cat; }
+#p3 { grid-area: tape; }
+#p4 { grid-area: books; }
+#p5 { grid-area: street; }
