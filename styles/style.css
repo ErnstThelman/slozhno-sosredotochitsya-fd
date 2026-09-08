@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: var(--bgImage);
+  background-image: var(--bg-Image);
   background-position: center;
   background-attachment: fixed;
   background-color: var(--bg-color);
@@ -263,7 +263,6 @@
 
    .content__text-block {
     grid-auto-flow: row;
-    grid-template-columns: 1fr;
   }
 }
 
