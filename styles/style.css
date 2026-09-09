@@ -244,8 +244,14 @@
   .header__theme-menu-list {
     grid-auto-flow: row;
     justify-self: end;
-    padding: 24% 0rem;
+    padding: 22.2% 0rem;
   }
+
+  .header__title-text {
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+
 
   .page {
     inline-size: 100%;
