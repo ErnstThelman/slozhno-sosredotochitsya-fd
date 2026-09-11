@@ -9,8 +9,8 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --bg-Image: url('../images/cover-image-light.png');
-  --bg-color: #ffffff;
+  --bg-image: url('../images/cover-image-light.png');
+  --bg-color: #fff1f7;
   --text-color: #000;
   --title-color: #FFC2E6;
   --content-title-color: #000;
@@ -25,8 +25,8 @@
 
 @media (prefers-color-scheme: light) {
   :root:not(.theme-light):not(.theme-dark) {
-    --bg-Image: url('../images/cover-image-light.png');
-    --bg-color: #ffffff;
+    --bg-image: url('../images/cover-image-light.png');
+    --bg-color: #fff1f7;
     --text-color: #000;
     --title-color: #FFC2E6;
     --content-title-color: #000;
